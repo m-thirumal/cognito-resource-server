@@ -1,0 +1,22 @@
+spring: 
+  application: 
+    name: cognito-resource-server
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_XXXXXXX
+  
+  profiles: 
+    active: DEV
+  main:
+    banner-mode: console
+server:
+  port: 9034
+logging:
+  level:
+    '[in.thirumal]': debug
+  file:
+    path: logs
+    name: logs/cognito-resource-server.log
+  
